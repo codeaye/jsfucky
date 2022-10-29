@@ -1,0 +1,19 @@
+[package]
+name = "jsfucky"
+version = "0.1.0"
+edition = "2021"
+authors = ["Nav <navaneeth.sajiv@gmail.com>"]
+description = "A jsfuck transpiler cli written in Rust 🦀"
+
+[dependencies]
+anyhow = "1.0.66"
+clap = { version = "4.0.18", features = ["derive"] }
+colored = "2.0.0"
+fs_extra = "1.2.0"
+glob = "0.3.0"
+itertools = "0.10.5"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
